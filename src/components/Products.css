@@ -1,0 +1,45 @@
+.product-card {
+  cursor: pointer;
+  display: grid;
+  grid-template: 'image image' 60%
+    'title title' 25%
+    'price price' 15% / 1fr 1fr;
+  min-height: 450px;
+}
+
+.product-title, .product-price, .product-image {
+  cursor: pointer;
+}
+
+.product-image {
+  grid-area: image;
+  max-width: 300px;
+  min-width: 150px;
+}
+
+.product-title, .product-price {
+  padding: 5px;
+}
+
+.product-title {
+  grid-area: title;
+}
+
+.product-price {
+  color: lime;
+  font-size: 2rem;
+  grid-area: price;
+}
+
+.link {
+  color: var(--main-text-color);
+  text-decoration: none;
+}
+
+@media screen and ( min-width : 800px ) {
+
+  .product-image {
+    width: 100%;
+
+  }
+}
